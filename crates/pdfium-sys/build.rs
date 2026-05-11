@@ -26,6 +26,11 @@ fn main() {
     println!("cargo:rustc-link-lib=dylib=pdfium");
     println!("cargo:lib_path={}", lib_dir.display());
 
+    // Copy the dylib into OUT_DIR so it's on the rpath that cargo sets
+    // for crates with `links = ...`. This is needed on macOS where the
+    // dylib's install name is @rpath/libpdfium.dylib.
+    copy_dylib_to_target_deps(&lib_dir);
+
     run_bindgen(&include_dir);
 }
 
@@ -159,6 +164,37 @@ fn fix_dylib_install_name(dir: &Path) {
         Ok(s) if s.success() => {}
         Ok(s) => eprintln!("pdfium-sys: install_name_tool exited with {s}"),
         Err(e) => eprintln!("pdfium-sys: failed to run install_name_tool: {e}"),
+    }
+}
+
+/// Copy the pdfium shared library into `target/<profile>/deps/` so the
+/// runtime dynamic linker can find it. Cargo includes this directory in
+/// the rpath of test and binary artifacts.
+fn copy_dylib_to_target_deps(lib_dir: &Path) {
+    let target_os = env::var("CARGO_CFG_TARGET_OS").unwrap_or_default();
+
+    let dylib_name = match target_os.as_str() {
+        "macos" => "libpdfium.dylib",
+        "windows" => "pdfium.dll",
+        _ => "libpdfium.so",
+    };
+
+    let src = lib_dir.join(dylib_name);
+    if !src.exists() {
+        return;
+    }
+
+    // OUT_DIR is typically target/<profile>/build/<pkg>-<hash>/out
+    // We want target/<profile>/deps which is 3 levels up then into deps
+    let out_dir = PathBuf::from(env::var("OUT_DIR").unwrap());
+    if let Some(build_dir) = out_dir.parent().and_then(|p| p.parent()).and_then(|p| p.parent()) {
+        let deps_dir = build_dir.join("deps");
+        if deps_dir.is_dir() {
+            let dst = deps_dir.join(dylib_name);
+            fs::copy(&src, &dst).unwrap_or_else(|e| {
+                panic!("failed to copy {} to {}: {e}", src.display(), dst.display())
+            });
+        }
     }
 }
 

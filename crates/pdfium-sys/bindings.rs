@@ -360,13 +360,6 @@ pub struct FPDF_BSTR_ {
     pub str_: *mut ::std::os::raw::c_char,
     pub len: ::std::os::raw::c_int,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of FPDF_BSTR_"][::std::mem::size_of::<FPDF_BSTR_>() - 16usize];
-    ["Alignment of FPDF_BSTR_"][::std::mem::align_of::<FPDF_BSTR_>() - 8usize];
-    ["Offset of field: FPDF_BSTR_::str_"][::std::mem::offset_of!(FPDF_BSTR_, str_) - 0usize];
-    ["Offset of field: FPDF_BSTR_::len"][::std::mem::offset_of!(FPDF_BSTR_, len) - 8usize];
-};
 impl Default for FPDF_BSTR_ {
     fn default() -> Self {
         let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
@@ -388,17 +381,6 @@ pub struct _FS_MATRIX_ {
     pub e: f32,
     pub f: f32,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _FS_MATRIX_"][::std::mem::size_of::<_FS_MATRIX_>() - 24usize];
-    ["Alignment of _FS_MATRIX_"][::std::mem::align_of::<_FS_MATRIX_>() - 4usize];
-    ["Offset of field: _FS_MATRIX_::a"][::std::mem::offset_of!(_FS_MATRIX_, a) - 0usize];
-    ["Offset of field: _FS_MATRIX_::b"][::std::mem::offset_of!(_FS_MATRIX_, b) - 4usize];
-    ["Offset of field: _FS_MATRIX_::c"][::std::mem::offset_of!(_FS_MATRIX_, c) - 8usize];
-    ["Offset of field: _FS_MATRIX_::d"][::std::mem::offset_of!(_FS_MATRIX_, d) - 12usize];
-    ["Offset of field: _FS_MATRIX_::e"][::std::mem::offset_of!(_FS_MATRIX_, e) - 16usize];
-    ["Offset of field: _FS_MATRIX_::f"][::std::mem::offset_of!(_FS_MATRIX_, f) - 20usize];
-};
 pub type FS_MATRIX = _FS_MATRIX_;
 #[repr(C)]
 #[derive(Debug, Default, Copy, Clone)]
@@ -408,15 +390,6 @@ pub struct _FS_RECTF_ {
     pub right: f32,
     pub bottom: f32,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _FS_RECTF_"][::std::mem::size_of::<_FS_RECTF_>() - 16usize];
-    ["Alignment of _FS_RECTF_"][::std::mem::align_of::<_FS_RECTF_>() - 4usize];
-    ["Offset of field: _FS_RECTF_::left"][::std::mem::offset_of!(_FS_RECTF_, left) - 0usize];
-    ["Offset of field: _FS_RECTF_::top"][::std::mem::offset_of!(_FS_RECTF_, top) - 4usize];
-    ["Offset of field: _FS_RECTF_::right"][::std::mem::offset_of!(_FS_RECTF_, right) - 8usize];
-    ["Offset of field: _FS_RECTF_::bottom"][::std::mem::offset_of!(_FS_RECTF_, bottom) - 12usize];
-};
 pub type FS_LPRECTF = *mut _FS_RECTF_;
 pub type FS_RECTF = _FS_RECTF_;
 pub type FS_LPCRECTF = *const FS_RECTF;
@@ -426,13 +399,6 @@ pub struct FS_SIZEF_ {
     pub width: f32,
     pub height: f32,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of FS_SIZEF_"][::std::mem::size_of::<FS_SIZEF_>() - 8usize];
-    ["Alignment of FS_SIZEF_"][::std::mem::align_of::<FS_SIZEF_>() - 4usize];
-    ["Offset of field: FS_SIZEF_::width"][::std::mem::offset_of!(FS_SIZEF_, width) - 0usize];
-    ["Offset of field: FS_SIZEF_::height"][::std::mem::offset_of!(FS_SIZEF_, height) - 4usize];
-};
 pub type FS_LPSIZEF = *mut FS_SIZEF_;
 pub type FS_SIZEF = FS_SIZEF_;
 pub type FS_LPCSIZEF = *const FS_SIZEF;
@@ -442,13 +408,6 @@ pub struct FS_POINTF_ {
     pub x: f32,
     pub y: f32,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of FS_POINTF_"][::std::mem::size_of::<FS_POINTF_>() - 8usize];
-    ["Alignment of FS_POINTF_"][::std::mem::align_of::<FS_POINTF_>() - 4usize];
-    ["Offset of field: FS_POINTF_::x"][::std::mem::offset_of!(FS_POINTF_, x) - 0usize];
-    ["Offset of field: FS_POINTF_::y"][::std::mem::offset_of!(FS_POINTF_, y) - 4usize];
-};
 pub type FS_LPPOINTF = *mut FS_POINTF_;
 pub type FS_POINTF = FS_POINTF_;
 pub type FS_LPCPOINTF = *const FS_POINTF;
@@ -464,19 +423,6 @@ pub struct _FS_QUADPOINTSF {
     pub x4: FS_FLOAT,
     pub y4: FS_FLOAT,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _FS_QUADPOINTSF"][::std::mem::size_of::<_FS_QUADPOINTSF>() - 32usize];
-    ["Alignment of _FS_QUADPOINTSF"][::std::mem::align_of::<_FS_QUADPOINTSF>() - 4usize];
-    ["Offset of field: _FS_QUADPOINTSF::x1"][::std::mem::offset_of!(_FS_QUADPOINTSF, x1) - 0usize];
-    ["Offset of field: _FS_QUADPOINTSF::y1"][::std::mem::offset_of!(_FS_QUADPOINTSF, y1) - 4usize];
-    ["Offset of field: _FS_QUADPOINTSF::x2"][::std::mem::offset_of!(_FS_QUADPOINTSF, x2) - 8usize];
-    ["Offset of field: _FS_QUADPOINTSF::y2"][::std::mem::offset_of!(_FS_QUADPOINTSF, y2) - 12usize];
-    ["Offset of field: _FS_QUADPOINTSF::x3"][::std::mem::offset_of!(_FS_QUADPOINTSF, x3) - 16usize];
-    ["Offset of field: _FS_QUADPOINTSF::y3"][::std::mem::offset_of!(_FS_QUADPOINTSF, y3) - 20usize];
-    ["Offset of field: _FS_QUADPOINTSF::x4"][::std::mem::offset_of!(_FS_QUADPOINTSF, x4) - 24usize];
-    ["Offset of field: _FS_QUADPOINTSF::y4"][::std::mem::offset_of!(_FS_QUADPOINTSF, y4) - 28usize];
-};
 pub type FS_QUADPOINTSF = _FS_QUADPOINTSF;
 pub type FPDF_ANNOTATION_SUBTYPE = ::std::os::raw::c_int;
 pub type FPDF_ANNOT_APPEARANCEMODE = ::std::os::raw::c_int;
@@ -498,25 +444,6 @@ pub struct FPDF_LIBRARY_CONFIG_ {
     pub m_RendererType: FPDF_RENDERER_TYPE,
     pub m_FontLibraryType: FPDF_FONT_BACKEND_TYPE,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of FPDF_LIBRARY_CONFIG_"][::std::mem::size_of::<FPDF_LIBRARY_CONFIG_>() - 48usize];
-    ["Alignment of FPDF_LIBRARY_CONFIG_"][::std::mem::align_of::<FPDF_LIBRARY_CONFIG_>() - 8usize];
-    ["Offset of field: FPDF_LIBRARY_CONFIG_::version"]
-        [::std::mem::offset_of!(FPDF_LIBRARY_CONFIG_, version) - 0usize];
-    ["Offset of field: FPDF_LIBRARY_CONFIG_::m_pUserFontPaths"]
-        [::std::mem::offset_of!(FPDF_LIBRARY_CONFIG_, m_pUserFontPaths) - 8usize];
-    ["Offset of field: FPDF_LIBRARY_CONFIG_::m_pIsolate"]
-        [::std::mem::offset_of!(FPDF_LIBRARY_CONFIG_, m_pIsolate) - 16usize];
-    ["Offset of field: FPDF_LIBRARY_CONFIG_::m_v8EmbedderSlot"]
-        [::std::mem::offset_of!(FPDF_LIBRARY_CONFIG_, m_v8EmbedderSlot) - 24usize];
-    ["Offset of field: FPDF_LIBRARY_CONFIG_::m_pPlatform"]
-        [::std::mem::offset_of!(FPDF_LIBRARY_CONFIG_, m_pPlatform) - 32usize];
-    ["Offset of field: FPDF_LIBRARY_CONFIG_::m_RendererType"]
-        [::std::mem::offset_of!(FPDF_LIBRARY_CONFIG_, m_RendererType) - 40usize];
-    ["Offset of field: FPDF_LIBRARY_CONFIG_::m_FontLibraryType"]
-        [::std::mem::offset_of!(FPDF_LIBRARY_CONFIG_, m_FontLibraryType) - 44usize];
-};
 impl Default for FPDF_LIBRARY_CONFIG_ {
     fn default() -> Self {
         let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
@@ -570,17 +497,6 @@ pub struct FPDF_FILEACCESS {
     >,
     pub m_Param: *mut ::std::os::raw::c_void,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of FPDF_FILEACCESS"][::std::mem::size_of::<FPDF_FILEACCESS>() - 24usize];
-    ["Alignment of FPDF_FILEACCESS"][::std::mem::align_of::<FPDF_FILEACCESS>() - 8usize];
-    ["Offset of field: FPDF_FILEACCESS::m_FileLen"]
-        [::std::mem::offset_of!(FPDF_FILEACCESS, m_FileLen) - 0usize];
-    ["Offset of field: FPDF_FILEACCESS::m_GetBlock"]
-        [::std::mem::offset_of!(FPDF_FILEACCESS, m_GetBlock) - 8usize];
-    ["Offset of field: FPDF_FILEACCESS::m_Param"]
-        [::std::mem::offset_of!(FPDF_FILEACCESS, m_Param) - 16usize];
-};
 impl Default for FPDF_FILEACCESS {
     fn default() -> Self {
         let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
@@ -625,25 +541,6 @@ pub struct FPDF_FILEHANDLER_ {
         ) -> FPDF_RESULT,
     >,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of FPDF_FILEHANDLER_"][::std::mem::size_of::<FPDF_FILEHANDLER_>() - 56usize];
-    ["Alignment of FPDF_FILEHANDLER_"][::std::mem::align_of::<FPDF_FILEHANDLER_>() - 8usize];
-    ["Offset of field: FPDF_FILEHANDLER_::clientData"]
-        [::std::mem::offset_of!(FPDF_FILEHANDLER_, clientData) - 0usize];
-    ["Offset of field: FPDF_FILEHANDLER_::Release"]
-        [::std::mem::offset_of!(FPDF_FILEHANDLER_, Release) - 8usize];
-    ["Offset of field: FPDF_FILEHANDLER_::GetSize"]
-        [::std::mem::offset_of!(FPDF_FILEHANDLER_, GetSize) - 16usize];
-    ["Offset of field: FPDF_FILEHANDLER_::ReadBlock"]
-        [::std::mem::offset_of!(FPDF_FILEHANDLER_, ReadBlock) - 24usize];
-    ["Offset of field: FPDF_FILEHANDLER_::WriteBlock"]
-        [::std::mem::offset_of!(FPDF_FILEHANDLER_, WriteBlock) - 32usize];
-    ["Offset of field: FPDF_FILEHANDLER_::Flush"]
-        [::std::mem::offset_of!(FPDF_FILEHANDLER_, Flush) - 40usize];
-    ["Offset of field: FPDF_FILEHANDLER_::Truncate"]
-        [::std::mem::offset_of!(FPDF_FILEHANDLER_, Truncate) - 48usize];
-};
 impl Default for FPDF_FILEHANDLER_ {
     fn default() -> Self {
         let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
@@ -732,19 +629,6 @@ pub struct FPDF_COLORSCHEME_ {
     pub text_fill_color: FPDF_DWORD,
     pub text_stroke_color: FPDF_DWORD,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of FPDF_COLORSCHEME_"][::std::mem::size_of::<FPDF_COLORSCHEME_>() - 32usize];
-    ["Alignment of FPDF_COLORSCHEME_"][::std::mem::align_of::<FPDF_COLORSCHEME_>() - 8usize];
-    ["Offset of field: FPDF_COLORSCHEME_::path_fill_color"]
-        [::std::mem::offset_of!(FPDF_COLORSCHEME_, path_fill_color) - 0usize];
-    ["Offset of field: FPDF_COLORSCHEME_::path_stroke_color"]
-        [::std::mem::offset_of!(FPDF_COLORSCHEME_, path_stroke_color) - 8usize];
-    ["Offset of field: FPDF_COLORSCHEME_::text_fill_color"]
-        [::std::mem::offset_of!(FPDF_COLORSCHEME_, text_fill_color) - 16usize];
-    ["Offset of field: FPDF_COLORSCHEME_::text_stroke_color"]
-        [::std::mem::offset_of!(FPDF_COLORSCHEME_, text_stroke_color) - 24usize];
-};
 pub type FPDF_COLORSCHEME = FPDF_COLORSCHEME_;
 unsafe extern "C" {
     pub fn FPDF_RenderPageBitmap(
@@ -1155,26 +1039,6 @@ pub struct FPDF_IMAGEOBJ_METADATA {
     pub colorspace: ::std::os::raw::c_int,
     pub marked_content_id: ::std::os::raw::c_int,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of FPDF_IMAGEOBJ_METADATA"][::std::mem::size_of::<FPDF_IMAGEOBJ_METADATA>() - 28usize];
-    ["Alignment of FPDF_IMAGEOBJ_METADATA"]
-        [::std::mem::align_of::<FPDF_IMAGEOBJ_METADATA>() - 4usize];
-    ["Offset of field: FPDF_IMAGEOBJ_METADATA::width"]
-        [::std::mem::offset_of!(FPDF_IMAGEOBJ_METADATA, width) - 0usize];
-    ["Offset of field: FPDF_IMAGEOBJ_METADATA::height"]
-        [::std::mem::offset_of!(FPDF_IMAGEOBJ_METADATA, height) - 4usize];
-    ["Offset of field: FPDF_IMAGEOBJ_METADATA::horizontal_dpi"]
-        [::std::mem::offset_of!(FPDF_IMAGEOBJ_METADATA, horizontal_dpi) - 8usize];
-    ["Offset of field: FPDF_IMAGEOBJ_METADATA::vertical_dpi"]
-        [::std::mem::offset_of!(FPDF_IMAGEOBJ_METADATA, vertical_dpi) - 12usize];
-    ["Offset of field: FPDF_IMAGEOBJ_METADATA::bits_per_pixel"]
-        [::std::mem::offset_of!(FPDF_IMAGEOBJ_METADATA, bits_per_pixel) - 16usize];
-    ["Offset of field: FPDF_IMAGEOBJ_METADATA::colorspace"]
-        [::std::mem::offset_of!(FPDF_IMAGEOBJ_METADATA, colorspace) - 20usize];
-    ["Offset of field: FPDF_IMAGEOBJ_METADATA::marked_content_id"]
-        [::std::mem::offset_of!(FPDF_IMAGEOBJ_METADATA, marked_content_id) - 24usize];
-};
 unsafe extern "C" {
     pub fn FPDF_CreateNewDocument() -> FPDF_DOCUMENT;
 }
@@ -2076,37 +1940,6 @@ pub struct _IPDF_JsPlatform {
     pub m_isolate: *mut ::std::os::raw::c_void,
     pub m_v8EmbedderSlot: ::std::os::raw::c_uint,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _IPDF_JsPlatform"][::std::mem::size_of::<_IPDF_JsPlatform>() - 104usize];
-    ["Alignment of _IPDF_JsPlatform"][::std::mem::align_of::<_IPDF_JsPlatform>() - 8usize];
-    ["Offset of field: _IPDF_JsPlatform::version"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, version) - 0usize];
-    ["Offset of field: _IPDF_JsPlatform::app_alert"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, app_alert) - 8usize];
-    ["Offset of field: _IPDF_JsPlatform::app_beep"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, app_beep) - 16usize];
-    ["Offset of field: _IPDF_JsPlatform::app_response"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, app_response) - 24usize];
-    ["Offset of field: _IPDF_JsPlatform::Doc_getFilePath"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, Doc_getFilePath) - 32usize];
-    ["Offset of field: _IPDF_JsPlatform::Doc_mail"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, Doc_mail) - 40usize];
-    ["Offset of field: _IPDF_JsPlatform::Doc_print"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, Doc_print) - 48usize];
-    ["Offset of field: _IPDF_JsPlatform::Doc_submitForm"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, Doc_submitForm) - 56usize];
-    ["Offset of field: _IPDF_JsPlatform::Doc_gotoPage"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, Doc_gotoPage) - 64usize];
-    ["Offset of field: _IPDF_JsPlatform::Field_browse"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, Field_browse) - 72usize];
-    ["Offset of field: _IPDF_JsPlatform::m_pFormfillinfo"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, m_pFormfillinfo) - 80usize];
-    ["Offset of field: _IPDF_JsPlatform::m_isolate"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, m_isolate) - 88usize];
-    ["Offset of field: _IPDF_JsPlatform::m_v8EmbedderSlot"]
-        [::std::mem::offset_of!(_IPDF_JsPlatform, m_v8EmbedderSlot) - 96usize];
-};
 impl Default for _IPDF_JsPlatform {
     fn default() -> Self {
         let mut s = ::std::mem::MaybeUninit::<Self>::uninit();
@@ -2131,27 +1964,6 @@ pub struct _FPDF_SYSTEMTIME {
     pub wSecond: ::std::os::raw::c_ushort,
     pub wMilliseconds: ::std::os::raw::c_ushort,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _FPDF_SYSTEMTIME"][::std::mem::size_of::<_FPDF_SYSTEMTIME>() - 16usize];
-    ["Alignment of _FPDF_SYSTEMTIME"][::std::mem::align_of::<_FPDF_SYSTEMTIME>() - 2usize];
-    ["Offset of field: _FPDF_SYSTEMTIME::wYear"]
-        [::std::mem::offset_of!(_FPDF_SYSTEMTIME, wYear) - 0usize];
-    ["Offset of field: _FPDF_SYSTEMTIME::wMonth"]
-        [::std::mem::offset_of!(_FPDF_SYSTEMTIME, wMonth) - 2usize];
-    ["Offset of field: _FPDF_SYSTEMTIME::wDayOfWeek"]
-        [::std::mem::offset_of!(_FPDF_SYSTEMTIME, wDayOfWeek) - 4usize];
-    ["Offset of field: _FPDF_SYSTEMTIME::wDay"]
-        [::std::mem::offset_of!(_FPDF_SYSTEMTIME, wDay) - 6usize];
-    ["Offset of field: _FPDF_SYSTEMTIME::wHour"]
-        [::std::mem::offset_of!(_FPDF_SYSTEMTIME, wHour) - 8usize];
-    ["Offset of field: _FPDF_SYSTEMTIME::wMinute"]
-        [::std::mem::offset_of!(_FPDF_SYSTEMTIME, wMinute) - 10usize];
-    ["Offset of field: _FPDF_SYSTEMTIME::wSecond"]
-        [::std::mem::offset_of!(_FPDF_SYSTEMTIME, wSecond) - 12usize];
-    ["Offset of field: _FPDF_SYSTEMTIME::wMilliseconds"]
-        [::std::mem::offset_of!(_FPDF_SYSTEMTIME, wMilliseconds) - 14usize];
-};
 pub type FPDF_SYSTEMTIME = _FPDF_SYSTEMTIME;
 #[repr(C)]
 #[derive(Debug, Copy, Clone)]
@@ -2375,83 +2187,6 @@ pub struct _FPDF_FORMFILLINFO {
         ),
     >,
 }
-#[allow(clippy::unnecessary_operation, clippy::identity_op)]
-const _: () = {
-    ["Size of _FPDF_FORMFILLINFO"][::std::mem::size_of::<_FPDF_FORMFILLINFO>() - 280usize];
-    ["Alignment of _FPDF_FORMFILLINFO"][::std::mem::align_of::<_FPDF_FORMFILLINFO>() - 8usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::version"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, version) - 0usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::Release"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, Release) - 8usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_Invalidate"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_Invalidate) - 16usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_OutputSelectedRect"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_OutputSelectedRect) - 24usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_SetCursor"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_SetCursor) - 32usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_SetTimer"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_SetTimer) - 40usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_KillTimer"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_KillTimer) - 48usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GetLocalTime"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GetLocalTime) - 56usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_OnChange"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_OnChange) - 64usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GetPage"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GetPage) - 72usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GetCurrentPage"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GetCurrentPage) - 80usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GetRotation"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GetRotation) - 88usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_ExecuteNamedAction"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_ExecuteNamedAction) - 96usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_SetTextFieldFocus"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_SetTextFieldFocus) - 104usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_DoURIAction"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_DoURIAction) - 112usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_DoGoToAction"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_DoGoToAction) - 120usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::m_pJsPlatform"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, m_pJsPlatform) - 128usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::xfa_disabled"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, xfa_disabled) - 136usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_DisplayCaret"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_DisplayCaret) - 144usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GetCurrentPageIndex"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GetCurrentPageIndex) - 152usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_SetCurrentPage"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_SetCurrentPage) - 160usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GotoURL"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GotoURL) - 168usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GetPageViewRect"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GetPageViewRect) - 176usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_PageEvent"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_PageEvent) - 184usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_PopupMenu"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_PopupMenu) - 192usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_OpenFile"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_OpenFile) - 200usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_EmailTo"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_EmailTo) - 208usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_UploadTo"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_UploadTo) - 216usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GetPlatform"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GetPlatform) - 224usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_GetLanguage"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_GetLanguage) - 232usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_DownloadFromURL"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_DownloadFromURL) - 240usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_PostRequestURL"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_PostRequestURL) - 248usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_PutRequestURL"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_PutRequestURL) - 256usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_OnFocusChange"]
-        [::std::mem::offset_of!(_FPDF_FORMFILLINFO, FFI_OnFocusChange) - 264usize];
-    ["Offset of field: _FPDF_FORMFILLINFO::FFI_DoURIActionWithKeyboardModifier"][::std::mem::offset_of!(
-        _FPDF_FORMFILLINFO,
-        FFI_DoURIActionWithKeyboardModifier
-    ) - 272usize];
-};
 impl Default for _FPDF_FORMFILLINFO {
     fn default() -> Self {
         let mut s = ::std::mem::MaybeUninit::<Self>::uninit();

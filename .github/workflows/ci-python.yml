@@ -210,7 +210,7 @@ jobs:
           path: dist
 
       - name: Install wheel
-        run: pip install --find-links dist liteparse
+        run: pip install --no-index --find-links dist liteparse
 
       - name: Smoke test
         run: |
